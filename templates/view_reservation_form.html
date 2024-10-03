@@ -1,0 +1,61 @@
+
+{% extends 'base_user_interface.html' %}
+
+{% block title %} View Reservation {% endblock %}
+
+{% block content %}
+    <style>
+        /* Add your CSS styles here */
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+             padding: 10px;
+            margin-bottom: 20px; /* Add margin between form and footer */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px; /* Add margin between button and form */
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+    <h1>View Reservation</h1>
+    <form method="post" action="{{ url_for('view_reservation') }}" style=" background-color: rgba(137, 137, 137, 0.15); border:1px solid">
+        <label for="firstname">First Name:</label>
+        <input type="text" name="firstname" required>
+        <br>
+        <label for="lastname">Last Name:</label>
+        <input type="text" name="lastname" required>
+        <br>
+        <label for="regnumber">Registration Number:</label>
+        <input type="text" name="regnumber" required>
+        <br>
+        <button type="submit">View Reservation</button>
+    </form>
+{% endblock %}

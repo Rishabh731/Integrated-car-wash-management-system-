@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="menu-wrap">
+    <div class="menu">
+        <ul class="nav" style="list-style-type: none; margin-right:50px; margin-left: 50px;
+        padding: 0; display: flex; justify-content:
+        space-around; align-items: center;">
+            <li class="nav-bar" style="margin: 0 10px;"><a href="/" class="nav-bar-link">Home</a></li>
+            <li class="nav-bar" style="margin: 0 10px;"><a href="/reservation" class="nav-bar-link">New Order</a></li>
+            <li class="nav-bar" style="margin: 0 10px;"><a href="/view_reservation" class="nav-bar-link">View Order</a></li>
+            <li class="nav-bar" style="margin: 0 10px;"><a href="/registered_users" class="nav-bar-link">View All Orders</a></li>
+            <li class="nav-bar" style="margin: 0 10px;"><a href="/deregister" class="nav-bar-link">Delete Order</a></li>
+            <li class="nav-bar" style="margin: 0 10px;"><a href="/about" class="nav-bar-link">About Us</a></li>
+        </ul>
+    </div>
+</div>
+
+
+{% block content %}{% endblock %}
+
+<footer>
+    <div class="footer-wrap">
+        <div class="footer-menu-first">
+            <ul>
+                <li><a href="/about" class="footer-bar-link">About us</a></li>
+                <li><a href="" class="footer-bar-link">Career</a></li>
+                <li><a href="" class="footer-bar-link">FAQ</a></li>
+                <li><a href="" class="footer-bar-link">Press</a></li>
+            </ul>
+        </div>
+        <div class="footer-menu-third">
+        <ul>
+            <li><a href="" class="footer-bar-link">Twitter</a></li>
+            <li><a href="" class="footer-bar-link">Pinterest</a></li>
+            <li><a href="" class="footer-bar-link">Facebook</a></li>
+            <li><a href="" class="footer-bar-link">Instagram</a></li>
+        </ul>
+    </div>
+    </div>
+</footer>
+
+<script src="../static/js/script.js"></script>
+</body>
+</html>

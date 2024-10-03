@@ -1,0 +1,102 @@
+{% extends 'base_user_interface.html' %}
+
+{% block title %} About Us {% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #f8f9fa;
+        color: #333;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .about {
+        text-align: center;
+        color: #007bff;
+    }
+
+    .about-block {
+        margin: 20px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-content {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    .contributors-list {
+        list-style-type: none;
+        padding: 0;
+        margin-left: 50px;
+    }
+
+    .contributor {
+        margin-bottom: 10px;
+        color: #28a745;
+    }
+
+    .contribution-title {
+        font-weight: bold;
+        color: #007bff;
+    }
+
+    .contribution-text {
+        color: #555;
+    }
+
+    /* Add additional styling for forms and tables if needed */
+    form {
+        margin-top: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+    }
+
+    th, td {
+        border: 1px solid #dee2e6;
+        padding: 12px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #007bff;
+        color: #fff;
+    }
+</style>
+
+<h1 class="about">About Us</h1>
+<div class="about-block">
+    <div class="about-content">
+       <p style="text-align: center; display: block;">
+    Welcome to our car washing management website!
+</p>
+
+        <br>
+        <p>
+            As part of our Database Management Lab course, we have developed this project to streamline the process of managing car wash reservations.
+        </p>
+        <p class="contribution-title">Project Contributors:</p>
+        <ul class="contributors-list">
+            <li class="contributor">Prince Chaudhary -: 106121095</li>
+            <li class="contributor">Rishabh Kumar -: 106121101</li>
+            <li class="contributor">Sanjeev Prasad -: 106121115</li>
+            <li class="contributor">Kundan Kumar -: 106121069</li>
+             <li class="contributor">Aditya Kamble -: 106121009</li>
+        </ul>
+        <p>
+            Our team has worked collaboratively to create a user-friendly platform for car owners to easily register and deregister their vehicles for our car washing services. We aim to provide a seamless experience for our users, ensuring their cars receive the care they deserve.
+        </p>
+    </div>
+</div>
+
+{% endblock %}

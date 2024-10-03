@@ -1,0 +1,99 @@
+{% extends 'base_user_interface.html' %}
+
+{% block title %} Reservation Details {% endblock %}
+
+{% block content %}
+
+  <h1>Reservation Details</h1>
+    <style>
+        .reservation-form {
+            margin: 20px;
+            padding: 20px;
+            background-color: #deeef9; /* Light blue background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        strong {
+            color: #009688;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #b0c4de; /* Light steel blue border */
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f8ff; /* Alice blue background */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Light gray background for even rows */
+        }
+    </style>
+    <div class="reservation-form">
+        <table>
+            <tr>
+                <th><strong>Field</strong></th>
+                <th><strong>Value</strong></th>
+            </tr>
+            <tr>
+                <td><strong>First Name</strong></td>
+                <td>{{ candidate['firstname'] }}</td>
+            </tr>
+            <tr>
+                <td><strong>Last Name</strong></td>
+                <td>{{ candidate['lastname'] }}</td>
+            </tr>
+            <tr>
+                <td><strong>Email</strong></td>
+                <td>{{ candidate['email'] }}</td>
+            </tr>
+            <tr>
+                <td><strong>Phone</strong></td>
+                <td>{{ candidate['phone'] }}</td>
+            </tr>
+            <tr>
+                <td><strong>Car Make</strong></td>
+                <td>{{ candidate['carmake'] }}</td>
+            </tr>
+            <tr>
+                <td><strong>Car Type</strong></td>
+                <td>{{ candidate['cartype'] }}</td>
+            </tr>
+            <tr>
+                <td><strong>Registration Number</strong></td>
+                <td>{{ candidate['regnumber'] }}</td>
+            </tr>
+            <tr>
+                <td><strong>Branch</strong></td>
+                <td>{{ candidate['branch'] }}</td>
+            </tr>
+            <tr>
+                <td><strong>Service</strong></td>
+                <td>{{ candidate['service'] }}</td>
+            </tr>
+            <tr>
+                <td><strong>Date</strong></td>
+                <td>{{ candidate['date'] }}</td>
+            </tr>
+            <tr>
+                <td><strong>Time</strong></td>
+                <td>{{ candidate['time'] }}</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+{% endblock %}
